@@ -13,6 +13,29 @@
   }
 }
 
+.name{
+  float:left;
+  padding-left: 20px;
+}
+
+.price{
+  float:right;
+  padding-right: 20px;
+}
+.nameHeading{
+  float:left;
+  padding-left: 20px;
+  font-weight: bold;
+}
+
+.priceHeading{
+  float:right;
+  padding-right: 20px;
+  font-weight: bold;
+}
+
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

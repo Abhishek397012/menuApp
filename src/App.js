@@ -74,8 +74,19 @@ function App() {
           data.map((item)=>{
             return <TabPanel>
 
+              <div>
+                <div className="nameHeading">Name</div>
+                <div className="priceHeading">Price</div>
+                <br/>
+            </div>
 
-              <EachItem key = {item.id} item = {item}/>
+              {
+              item.items.map((each)=>{
+                  return <EachItem name={each.name} price={each.price}/>
+              })
+              }
+
+
 
             </TabPanel>
           })

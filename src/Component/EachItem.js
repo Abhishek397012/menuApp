@@ -4,7 +4,9 @@ export class EachItem extends Component {
     render() {
         return (
             <div>
-               <h1> {this.props.item.heading} </h1>
+                <div className="name">{this.props.name}</div>
+                <div className="price">{this.props.price}</div>
+                <br/>
             </div>
         )
     }
