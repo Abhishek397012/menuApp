@@ -1,24 +1,87 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
+import EachItem from './Component/EachItem';
+
+
+const data = [
+  {
+    id: '1',
+    heading: 'Main Course',
+    items: [
+      {
+        name: 'Chilli Paneer(Dry/Gravy)',
+        price: 300
+      },
+      {
+        name: 'Chilli Mashroom(Dry/Gravy)',
+        price: 300
+      },
+      {
+        name: 'Veg Manchurian(Dry/Gravy)',
+        price: 250
+      },
+      {
+        name: 'Vegetable Crispy(Dry)',
+        price: 275
+      }
+    ]
+  },
+  {
+    id: '2',
+    heading: 'Soup',
+    items: [
+      {
+        name: 'Tomato Soup',
+        price: 155
+      },
+      {
+        name: 'Hot Sour Veg Soup',
+        price: 165
+      },
+      {
+        name: 'Sweet Corn Soup',
+        price: 165
+      },
+      {
+        name: 'Monchow Soup',
+        price: 178
+      }
+    ]
+  }
+]
+
 
 function App() {
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Tabs>
+
+        <TabList>
+          {
+            data.map((item) => {
+              return <Tab>{item.heading}</Tab>
+            }) 
+          }
+
+        </TabList>
+
+        {
+          data.map((item)=>{
+            return <TabPanel>
+
+
+              <EachItem key = {item.id} item = {item}/>
+
+            </TabPanel>
+          })
+        }
+
+      </Tabs>
     </div>
   );
 }
