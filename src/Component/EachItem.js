@@ -1,6 +1,16 @@
 import React, { Component } from 'react'
 
 export class EachItem extends Component {
+
+    constructor(props){
+        super(props)
+        this.state = {
+            name: '',
+            price: ''
+        }
+    }
+
+
     render() {
         return (
             <div >
