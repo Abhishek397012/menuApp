@@ -15,7 +15,7 @@ export class EachItem extends Component {
         return (
             <div >
                 <div className="name">{this.props.name}</div>
-                <div className="price">{this.props.price}</div>
+                <div className="price">{`Rs. ${this.props.price}`}</div>
                 <br/>
             </div>
         )

@@ -62,7 +62,7 @@ class App extends React.Component {
     axios
       .get(`/api/getData`)
       .then((res) => {
-        console.log("res", res);
+        // console.log("res", res);
         this.setState({ data: res.data });
       })
       .catch((err) => {
@@ -92,7 +92,7 @@ class App extends React.Component {
                 </div>
                
                 {item.items.map((each) => {
-                 {console.log(each)}
+                //  {console.log(each)}
                   return <EachItem name={each.name} price={each.price} />;
                 })}
               </TabPanel>
