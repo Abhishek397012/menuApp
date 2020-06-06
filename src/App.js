@@ -75,6 +75,8 @@ class App extends React.Component {
     
     return (
       <div className="App">
+        <h2>Karanataka Resturant</h2>
+        <h4>Menu</h4>
         <Tabs>
           <TabList>
             {this.state.data.map((item) => {
