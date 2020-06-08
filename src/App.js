@@ -54,7 +54,7 @@ class App extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      data: [
+      menu: [
         {
             heading: 'Main Course',
             items: [
@@ -106,7 +106,7 @@ class App extends React.Component {
       .get(`/api/getData`)
       .then((res) => {
         // console.log("res", res);
-        this.setState({ data: res.data });
+        this.setState({ menu: res.data });
       })
       .catch((err) => {
         console.log("err", err);
@@ -126,16 +126,23 @@ class App extends React.Component {
         <Tabs>
           <TabList>
             {
-              console.log('data', this.state.data)
+              console.log('state Data:', this.state.data)
+            }
+            { 
+              console.log('state:', this.state)
             }
             {
-            this.state.data.map((item) => {
+              console.log('menu:' , this.state.menu)
+            }
+
+            {
+            this.state.menu.map((item) => {
               return <Tab>{item.heading}</Tab>;
             })
             }
           </TabList>
 
-          {this.state.data.map((item) => {
+          {this.state.menu.map((item) => {
             return (
               <TabPanel>
                 <div>
