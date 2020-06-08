@@ -101,17 +101,17 @@ class App extends React.Component {
     }
   }
 
-  componentDidMount() {
-    axios
-      .get(`/api/getData`)
-      .then((res) => {
-        // console.log("res", res);
-        this.setState({ menu: res.data });
-      })
-      .catch((err) => {
-        console.log("err", err);
-      });
-  }
+  // componentDidMount() {
+  //   axios
+  //     .get(`/api/getData`)
+  //     .then((res) => {
+  //       console.log("res", res);
+  //       this.setState({ menu: res.data });
+  //     })
+  //     .catch((err) => {
+  //       console.log("err", err);
+  //     });
+  // }
 
   render() {
     
